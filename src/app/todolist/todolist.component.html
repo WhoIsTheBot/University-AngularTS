@@ -1,0 +1,33 @@
+<div class="wrapper">
+    <h1>Do To List</h1>
+    <hr />
+    <form (ngSubmit)="onSubmit(taskForm)" #taskForm="ngForm">
+        <div class="mb-3">
+            <label for="task" class="form-label">Enter task:</label>
+            <input type="text" class="form-control" id="task" aria-describedby="teskHelp" ngModel name="task" required>
+        </div>
+
+        <button id="submitButton" type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <hr>
+
+    <table class="table tasks">
+        <thead>
+            <tr>
+                <th scope="col">Task</th>
+                <th scope="col">Completed</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let t of taskArray; let i = index">
+                <td [ngClass]="{ 'text-decoration-line-through': t.isCompleted }">{{ t.taskName }}</td>
+                <td>
+                    <input id="myCheckbox" class="form-check-input" type="checkbox" [checked]="t.isCompleted" (change)="t.isCompleted = !t.isCompleted">
+                </td>
+                <td><button class="btn btn-danger btn-sm" (click)="onDelete(i)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

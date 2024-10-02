@@ -1,0 +1,33 @@
+.wrapper{
+    max-width: 680px;
+    padding: 10px 30px 30px 30px;
+    border-radius: 20px;
+    margin: 30px auto;
+    background-color: rgb(215, 235, 254);
+}
+
+h1{
+    text-align: center;
+}
+
+#submitButton{
+    margin-top: 20px;
+}
+
+#myCheckbox{
+    margin-left: 30px;
+}
+
+.text-decoration-line-through {
+    text-decoration: line-through; 
+    color: rgb(161, 161, 161);
+}
+
+.tasks{
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.btn-primary{
+    width: 200px;
+}
